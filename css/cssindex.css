@@ -1,0 +1,968 @@
+/* INDEX -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- */
+/* PARALLAX */
+.container_parallax_portada{
+    /*min-height: 650px;*/     
+    background-color: rgb(21, 10, 61);
+    transition: all 0.5s ease-in-out;
+}
+.container_parallax_portada_effect_background{
+    /*min-height: 650px;*/     
+    background-color: rgb(7, 3, 20);
+}
+.image_parallax_portada{
+    background-image: url("../resources/images/logo/logo.svg");
+    background-attachment: inherit;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    min-height: 100vh;
+    filter: url("filters.svg#filter-id");
+    transition: all 0.3s ease-in-out;
+    filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(1) saturate(100%);
+    animation: animation_image_parallax_portada_effect 5s ease-in-out;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+.image_parallax_portada_effect_overlay{
+    background-color: rgb(7, 3, 20) !important;
+}
+.image_parallax_portada_effect_blur{
+    background-size: 28%;
+}
+/* DESAFIO:: "TRANSFORMACIONES Y ANIMACIONES" */
+@keyframes animation_image_parallax_portada_effect {
+    0%{opacity: 0;}
+    5%{opacity: 1;filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(0);}
+    10%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(1);}
+    45%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(1) grayscale(1);}
+    50%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(1) grayscale(0);}
+    51%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(0) grayscale(1);}
+    52%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(1) grayscale(0);}
+    53%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(0) grayscale(1);}
+    54%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(1) grayscale(0);}
+    55%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(0) grayscale(1);}
+    56%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(1) grayscale(0);}
+    57%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(1) grayscale(1);}
+    58%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(0) grayscale(0);}
+    59%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(1) grayscale(1);}
+    100%{filter: drop-shadow(0px 0px 20px rgb(111, 0, 255)) brightness(1) saturate(100%);}
+}
+/*------------*/
+/* NEWS */
+.control_news{
+    width: 100%;
+    height: calc(91vh - 200px);
+    padding-top: 100px;
+    background-color: transparent;
+}
+.control_news.backImage{
+    background-image: url("../resources/images/logo/logo_H_plomo.svg");
+    background-attachment: fixed;
+    background-position: 50% 0%;
+    background-repeat: repeat;
+    background-size: 180px;
+    min-height: 95px;
+}
+/* DESAFIO:: "BOX MODEL" */
+.control_news >.background{
+    width: 95%;
+    height: auto;
+    margin-left: 2.5%;
+    background-color: transparent;
+}
+.control_news >.background .row_control{
+    width: 95%;
+    height: 100%;
+    margin-left: 2.5%;
+    background-color: transparent;
+}
+.control_news >.background .row_control >.background{
+    width: 95%;
+    height: 100%;
+    margin-left: 2.5%;
+    background-color: transparent;
+}
+.control_news >.background .row_control >.background .sideLeft{
+    float: left;
+    width: 35%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+}
+.control_news >.background .row_control >.background .sideLeft .row_image{
+    background-image: url("../resources/images/news/destacada_1/spacex_0.svg");
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 600px;
+    filter: drop-shadow(0px 0px 20px rgba(211, 211, 211, 0.411));
+}
+.control_news >.background .row_control >.background .sideRight{
+    float: left;
+    width: 65%;
+    height: 100%;
+    background-color: transparent;
+}
+.control_news >.background .row_control >.background .sideRight >.background{
+    width: 95%;
+    height: 100%;
+    margin-left: 2.5%;
+    padding-top: 0px;
+    background-color: transparent;
+}
+/* DESAFIO:: "BOX MODEL" */
+.control_news >.background .row_control >.background .sideRight >.background .description{
+    width: 100%;
+    text-align: justify;
+    background-color: transparent;
+    margin-top: 70px;
+    padding: 30px;
+    border-width: 3px 0px 0px 0px;
+    border-style: solid;
+    border-color: var(--colorVerde);
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .title{
+    background-color: var(--colorBackgroundText);
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .title h3{
+    font-size: 55px;
+    font-weight: bold;
+    font-family: var(--fontOne);
+    color: var(--colorAmarillo);
+    letter-spacing: 5px;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .text .paragraph{
+    font-size: 17px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: unset; /*MODIFICACION 123*/
+    font-style: normal; /*MODIFICACION 123*/
+    line-height: 20px;
+    word-spacing: 2px;
+    background-color: var(--colorBackgroundText);
+    padding-bottom: 20px;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons{
+    width: 100%;
+    height: 70px;
+    padding-top: 5px;
+    background-color: transparent;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background{
+    width: 100%;
+    height: 60px;
+    padding-top: 5px;
+    background-color: transparent;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .button{
+    float: right;
+    width: 20%;
+    height: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .button >.background{
+  width: 95%;
+  height: 50px;
+  margin-left: 2.5%;
+  padding-top: 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: var(--colorAmarillo);
+  color: rgb(22, 22, 22);
+  font-size: 18px;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .button >.background:hover{
+  box-shadow: 0px 0px 7px 5px rgba(255, 255, 255, 0.219);
+  color: white;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial{
+  float: right;
+  width: 80%;
+  height: 50px;
+  background-color: transparent;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial >.background{
+  width: 98%;
+  height: 50px;
+  margin-left: 1%;
+  padding-top: 2.5px;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial >.background .button_social{
+  float: right;
+  width: 50px;
+  height: 45px;
+  text-align: center;
+  padding-top: 1.5px;
+  padding-left: 2.5px;
+  cursor: pointer;
+  color: black;
+  background-color: transparent;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial >.background .button_social >.background{
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  border-radius: 5px;
+  background-color: var(--colorAmarillo);
+  transition: all 0.2s ease-in-out;
+}
+/* DESAFIO:: "TRANSFORMACIONES Y ANIMACIONES" */
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial >.background .button_social:hover >.background{
+    transform: scale(1.2) translateY(-5px);
+    color: white;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial >.background .button_social:hover >.background.LinkedIn{
+    background-color: var(--colorLinkedin) !important;
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial >.background .button_social:hover >.background.Instagram{
+    background-color: var(--colorInstagram);
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial >.background .button_social:hover >.background.Twitter{
+    background-color: var(--colorTwitter);
+}
+.control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial >.background .button_social:hover >.background.Facebook{
+    background-color: var(--colorFacebook);
+}
+.control_news >.background .row_control >.background .sideRight >.background .author{
+  width: 100%;
+  height: 130px;
+  background-color: transparent;
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 20px;
+  border-width: 3px 0px 3px 0px;
+  border-style: solid;
+  border-color: var(--colorVerde);
+}
+.control_news >.background .row_control >.background .sideRight >.background .author .info{
+  float: right;
+  width: 450px;
+  height: 70px;
+  padding-top: 10px;
+  background-color: transparent;
+  font-family: var(--fontOne);
+  background-color: transparent;
+}
+.control_news >.background .row_control >.background .sideRight >.background .author .info a{
+  color: var(--colorRojo) !important;
+  text-decoration: none !important;
+}
+.control_news >.background .row_control >.background .sideRight >.background .author .info a:hover{
+  color: var(--colorVerde) !important;
+  text-decoration: underline !important;
+  padding-right: 5px;
+}
+.control_news >.background .row_control >.background .sideRight >.background .author .info .name{
+  width: 100%;
+  height: 35px;
+  font-size: 25px;
+  padding-right: 15px;
+  color: var(--colorVerde) !important;
+  background-color: var(--colorBackgroundText);
+}
+.control_news >.background .row_control >.background .sideRight >.background .author .info .specialty{
+  width: 100%;
+  height: 35px;
+  font-size: 15px;  
+  padding-right: 15px;
+  color: var(--colorRojo);
+  background-color: var(--colorBackgroundText);
+}
+.control_news >.background .row_control >.background .sideRight >.background .author .avatar_background{
+  float: right;
+  width: 70px;
+  height: 70px;
+  min-height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--colorRojo);
+}
+.control_news >.background .row_control >.background .sideRight >.background .author .avatar_background .avatar:hover{
+  background-color: var(--colorVerde);
+}
+.control_news >.background .row_control >.background .sideRight >.background .author .avatar_background .avatar{
+  background-image: url("../resources/images/avatar.svg");
+  background-position: 45%;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  min-height: 70px;
+  border-radius: 50%;
+}
+/*------------*/
+/* CONTROL CATEGORIAS / DESAFIO:: "ASIGANDNO ESTILOS" (camelCase)*/
+.controlCategoria{
+    width: 100%;
+    /*height: auto;*/
+    height: calc(91vh - 200px);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: transparent;
+    background-color: var(--colorMorado);
+}
+/* DESAFIO:: "APLICAR FLEXBOX" */
+.controlCategoria >.background{
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    /*display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;*/
+    display: grid;
+    grid-template-areas: "col1 col2 col3 col4 col5 col6";
+    grid-template-columns: repeat(25%);
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.controlCategoria >.background .boxCategoria:nth-child(1){
+    grid-area: col1;
+}
+.controlCategoria >.background .boxCategoria:nth-child(2){
+    grid-area: col2;
+}
+.controlCategoria >.background .boxCategoria:nth-child(3){
+    grid-area: col3;
+}
+.controlCategoria >.background .boxCategoria:nth-child(4){
+    grid-area: col4;
+}
+.controlCategoria >.background .boxCategoria:nth-child(5){
+    grid-area: col5;
+}
+.controlCategoria >.background .boxCategoria:nth-child(6){
+    grid-area: col6;
+}
+.controlCategoria >.background .boxCategoria{
+    width: 200px;
+    height: 200px;
+    padding-top: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    border: solid 0px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+/*.controlCategoria >.background .boxCategoria:hover{
+    margin-top: 0px;
+}*/
+.controlCategoria >.background .boxCategoria .background{
+  width: 190px;
+  height: 190px;
+  margin-left: 5px;
+  background-color: var(--colorMorado);
+  border-radius: 5px;
+  border: solid 0px rgb(73, 10, 218);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* DESAFIO:: "TRANSFORMACIONES Y ANIMACIONES" */
+.controlCategoria >.background .boxCategoria:hover >.background{
+    border: solid 10px rgb(73, 10, 218);
+    box-shadow: inset 0px 0px 17px 5px rgb(73, 10, 218) ;
+}
+.controlCategoria >.background .boxCategoria .background .titleCategoria{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+.controlCategoria >.background .boxCategoria .background .titleCategoria h4{
+    color: white;
+    font-family: var(--fontGoogleEncode);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.controlCategoria >.background .boxCategoria .background .news{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    color: var(--colorAmarillo);
+    font-family: var(--fontGoogleEncode);
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+}
+.controlCategoria >.background .boxCategoria:hover .background .news{
+    animation: animation_news 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes animation_news{
+    0%{margin-left: 0px;}
+    25%{margin-left: -10px;}
+    50%{margin-left: 10px;}
+    100%{margin-left: 0;}
+}
+.controlCategoria .categoriaDescripcion{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.controlCategoria .categoriaDescripcion .background{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.controlCategoria .categoriaDescripcion .background .paragraph{
+    width: 35%;
+    padding-top: 10px;
+    margin-top: 0px;
+    opacity: 1;
+    background-color: transparent;
+}
+.controlCategoria .categoriaDescripcion .background .paragraph >p{
+    color: white;
+    text-align: center;
+    font-size: 1.1rem !important;
+    font-family: var(--fontGoogleEncode);
+}
+/*------------*/
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+    .image_parallax_portada{
+        background-position: 65% 55%;
+        background-size: 90%;
+        min-height: 100vh;
+    }
+    .control_news{
+        width: 100%;
+        height: calc(100vh - 200px);
+        padding-top: 50px;
+        background-color: transparent;
+    }
+    .control_news >.background{
+        width: 100%;
+        height: auto;
+        margin-left: 0%;
+        background-color: transparent;
+    }
+    .control_news >.background .row_control{
+        width: 100%;
+        height: 100%;
+        margin-left: 0%;
+        background-color: transparent;
+    }
+    .control_news >.background .row_control >.background{
+        width: 100%;
+        height: 100%;
+        margin-left: 0%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .control_news >.background .row_control >.background .sideLeft{
+        float: left;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        border-radius: 5px;
+    }
+    .control_news >.background .row_control >.background .sideLeft .row_image{
+        background-image: url("../resources/images/news/destacada_1/spacex_0.svg");
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .control_news >.background .row_control >.background .sideRight{
+        float: left;
+        width: 99%;
+        height: auto;
+        background-color: transparent;
+        position: absolute;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background{
+        width: 100%;
+        height: 100%;
+        margin-left: 0%;
+        padding-top: 35px;
+        background-color: transparent;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .description{
+        width: 100%;
+        background-color: transparent;
+        margin-top: 0px;
+        padding: 0px;
+        border: none;
+      }
+    .control_news >.background .row_control >.background .sideRight >.background .description .title{
+        text-align: center;
+        font-size: 3rem;
+        font-weight: normal;
+        color: var(--colorAmarillo);
+        padding-bottom: 0px;
+        background-color: var(--colorBackgroundText) !important;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .description .text .paragraph{
+        font-size: 1rem;
+        color: white;
+        letter-spacing: 1px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: justify;
+        padding-bottom: 20px;
+        background-color: var(--colorBackgroundText) !important;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial{
+        display: none;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .button{
+        float: right;
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        cursor: pointer;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .button >.background{
+        width: 30%;
+        height: 50px;
+        margin-left: 2.5%;
+        padding-top: 10px;
+        border-radius: 2px;
+        font-weight: bold;
+        background-color: var(--colorAmarillo);
+        color: rgb(22, 22, 22);
+        font-size: 18px;
+        animation: animation_button 7.5s ease-in-out infinite;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .button >.background:active{
+        box-shadow: 0px 0px 7px 5px rgba(255, 255, 255, 0.219) !important;
+        color: white !important;
+    }
+    @keyframes animation_button{
+        0%{
+            box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.219);
+            color: black;
+        }
+        1%{}
+        2%{
+            box-shadow: 0px 0px 7px 5px rgba(255, 255, 255, 0.219);
+            color: white;
+        }
+        3%{}
+        4%{
+            box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.219);
+            color: black;
+        }
+        5%{}
+        6%{
+            box-shadow: 0px 0px 7px 5px rgba(255, 255, 255, 0.219);
+            color: white;
+        }
+        7%{}
+        8%{
+            box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.219);
+            color: black;
+        }
+        9%{}
+        10%{}/* 0.5 SEG */
+        15%{}
+        20%{}/* 1 SEG */
+        25%{}
+        30%{}
+        35%{}
+        40%{}/* 2 SEG */
+        45%{}
+        50%{}
+        55%{}
+        60%{}/* 3 SEG */
+        65%{}
+        70%{}
+        75%{}
+        80%{}/* 4 SEG */
+        85%{}
+        90%{}
+        95%{}
+        100%{}/* 5 SEG */
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .author{
+      width: 100%;
+      height: 130px;
+      background-color: transparent;
+      text-align: right;
+      padding-top: 20px;
+      padding-right: 20px;
+      border: none;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .author .info{
+      width: 100%;
+      height: 70px;
+      padding-top: 0px;
+      background-color: transparent;
+      font-family: var(--fontOne);
+      background-color: transparent;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .author .info a{
+      color: var(--colorRojo) !important;
+      text-decoration: none !important;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .author .info a:hover{
+      color: var(--colorVerde) !important;
+      text-decoration: underline !important;
+      padding-right: 5px;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .author .info .name{
+      text-align: center;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .author .info .specialty{
+      text-align: center;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .author .avatar_background{
+      width: 100%;
+      height: 70px;
+      min-height: 70px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .author .avatar_background .avatar{
+      width: 50px;
+      height: 50px;
+      min-height: 70px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: var(--colorRojo);
+    }
+    .control_news >.background .row_control >.background .sideRight >.background .author .avatar_background .avatar{
+      background-image: url("../resources/images/avatar.svg");
+      background-position: 45%;
+      background-repeat: no-repeat;
+      background-size: 60%;
+      min-height: 50px;
+      border-radius: 50%;
+    }
+    .controlCategoria{
+        width: 100%;
+        height: auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background-color: transparent;
+        background-color: var(--colorMorado);
+    }
+    .controlCategoria >.background{
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        display: grid;
+        grid-template-areas: "col1 col2" "col3 col4" "col5 col6";
+        grid-template-columns: repeat(50%);
+        grid-template-rows: 33%;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlCategoria >.background .boxCategoria .background{
+        border: solid 1px rgb(73, 10, 218);
+        transition: all 0.1s ease-in-out;
+    }
+    .controlCategoria >.background .boxCategoria:hover .background{
+        border: solid 1px rgb(73, 10, 218);
+        box-shadow: none;
+    }
+    .controlCategoria >.background .boxCategoria .background:active{
+        border: solid 10px rgb(73, 10, 218);
+        box-shadow: inset 0px 0px 17px 5px rgb(73, 10, 218);
+    }
+    .controlCategoria .categoriaDescripcion .background .paragraph{
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .image_parallax_portada{
+      background-position: 55% 50%;
+      background-size: 50%;
+      min-height: 100vh;
+  }
+  .control_news{
+      width: 100%;
+      height: calc(100vh - 200px);
+      padding-top: 50px;
+      background-color: transparent;
+  }
+  .control_news >.background{
+      width: 100%;
+      height: auto;
+      margin-left: 0%;
+      background-color: transparent;
+  }
+  .control_news >.background .row_control{
+      width: 100%;
+      height: 100%;
+      margin-left: 0%;
+      background-color: transparent;
+  }
+  .control_news >.background .row_control >.background{
+      width: 100%;
+      height: 100%;
+      margin-left: 0%;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .control_news >.background .row_control >.background .sideLeft{
+      float: left;
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      border-radius: 5px;
+  }
+  .control_news >.background .row_control >.background .sideLeft .row_image{
+      background-image: url("../resources/images/news/destacada_1/spacex_0.svg");
+      background-position: 50% 0%;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+  .control_news >.background .row_control >.background .sideRight{
+      float: left;
+      width: 99%;
+      height: auto;
+      background-color: transparent;
+      position: absolute;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background{
+      width: 100%;
+      height: 100%;
+      margin-left: 0%;
+      padding-top: 35px;
+      background-color: transparent;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .description{
+      width: 100%;
+      background-color: transparent;
+      margin-top: 0px;
+      padding: 0px;
+      border: none;
+    }
+  .control_news >.background .row_control >.background .sideRight >.background .description .title{
+      text-align: center;
+      font-size: 3rem;
+      font-weight: normal;
+      color: var(--colorAmarillo);
+      padding-bottom: 0px;
+      background-color: var(--colorBackgroundText) !important;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .description .text .paragraph{
+      font-size: 1rem;
+      color: white;
+      letter-spacing: 1px;
+      padding-left: 100px;
+      padding-right: 100px;
+      text-align: justify;
+      padding-bottom: 50px;
+      background-color: var(--colorBackgroundText) !important;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .barsocial{
+      display: none;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .button{
+      float: right;
+      width: 100%;
+      height: 50px;
+      background-color: transparent;
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 10px;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .button >.background{
+      width: 20%;
+      height: 50px;
+      margin-left: 2.5%;
+      padding-top: 10px;
+      border-radius: 2px;
+      font-weight: bold;
+      background-color: var(--colorAmarillo);
+      color: rgb(22, 22, 22);
+      font-size: 18px;
+      animation: animation_button 0.75s ease-in-out infinite;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .description .barbuttons >.background .button >.background:hover{
+      box-shadow: 0px 0px 7px 5px rgba(255, 255, 255, 0.219);
+      color: white;
+  }
+  @keyframes animation_button{
+      0%{
+          box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.219);
+          color: black;
+      }
+      50%{
+          box-shadow: 0px 0px 7px 5px rgba(255, 255, 255, 0.219);
+          color: white;
+      }
+      100%{
+          box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.219);
+          color: black;
+      }
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .author{
+    width: 100%;
+    height: 130px;
+    background-color: transparent;
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 20px;
+    border: none;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .author .info{
+    width: 100%;
+    height: 70px;
+    padding-top: 0px;
+    background-color: transparent;
+    font-family: var(--fontOne);
+    background-color: transparent;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .author .info a{
+    color: var(--colorRojo) !important;
+    text-decoration: none !important;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .author .info a:hover{
+    color: var(--colorVerde) !important;
+    text-decoration: underline !important;
+    padding-right: 5px;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .author .info .name{
+    text-align: right;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .author .info .specialty{
+    text-align: right;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .author .avatar_background{
+    width: 100%;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .author .avatar_background .avatar{
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--colorRojo);
+  }
+  .control_news >.background .row_control >.background .sideRight >.background .author .avatar_background .avatar{
+    background-image: url("../resources/images/avatar.svg");
+    background-position: 45%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    min-height: 50px;
+    border-radius: 50%;
+  }
+  .controlCategoria{
+      width: 100%;
+      height: auto;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: transparent;
+      background-color: var(--colorMorado);
+  }
+  .controlCategoria >.background{
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      display: grid;
+      grid-template-areas: "col1 col2 col3" "col4 col5 col6";
+      grid-template-columns: repeat(33%);
+      grid-template-rows: 50%;
+      justify-content: center;
+      align-items: center;
+  }
+  .controlCategoria >.background .boxCategoria .background{
+      border: solid 1px rgb(73, 10, 218);
+      transition: all 0.1s ease-in-out;
+  }
+  .controlCategoria >.background .boxCategoria:hover .background{
+      border: solid 1px rgb(73, 10, 218);
+      box-shadow: none;
+  }
+  .controlCategoria >.background .boxCategoria .background:active{
+      border: solid 10px rgb(73, 10, 218);
+      box-shadow: inset 0px 0px 17px 5px rgb(73, 10, 218);
+  }
+  .controlCategoria .categoriaDescripcion .background .paragraph{
+      width: 80%;
+      padding-top: 20px;
+      opacity: 1;
+      background-color: transparent;
+  }
+  .controlCategoria .categoriaDescripcion .background .paragraph >p{
+      color: white;
+      text-align: center;
+      font-size: 1rem !important;
+      font-family: var(--fontGoogleEncode);
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .controlCategoria{
+        width: 100%;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: transparent;
+        background-color: var(--colorMorado);
+    }
+    .controlCategoria >.background{
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        display: grid;
+        grid-template-areas: "col1 col2 col3" "col4 col5 col6";
+        grid-template-columns: repeat(33%);
+        grid-template-rows: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlCategoria >.background .boxCategoria .background{
+        border: solid 1px rgb(73, 10, 218);
+        transition: all 0.1s ease-in-out;
+    }
+    .controlCategoria >.background .boxCategoria:hover .background{
+        border: solid 1px rgb(73, 10, 218);
+        box-shadow: none;
+    }
+    .controlCategoria >.background .boxCategoria .background:active{
+        border: solid 10px rgb(73, 10, 218);
+        box-shadow: inset 0px 0px 17px 5px rgb(73, 10, 218);
+    }
+    .controlCategoria .categoriaDescripcion .background .paragraph{
+        width: 80%;
+        padding-top: 20px;
+        opacity: 1;
+        background-color: transparent;
+    }
+    .controlCategoria .categoriaDescripcion .background .paragraph >p{
+        color: white;
+        text-align: center;
+        font-size: 1rem !important;
+        font-family: var(--fontGoogleEncode);
+    }
+}
+/* -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- */

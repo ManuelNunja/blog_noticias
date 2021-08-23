@@ -1,0 +1,1145 @@
+/* NEWS -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- */
+.controlNoticiasDestacada{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+/* DESAFIO:: "APLICAR FLEXBOX" */
+.controlNoticiasDestacada >.background{
+    width: 100%;
+    /*height: 400px;*/
+    height: 700px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada{
+    width: 370px;
+    /*height: 370px;*/
+    height: 590px;
+    background-color: black;
+    padding-top: 5px;
+    overflow: hidden;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background{
+    width: 370px;
+    /*height: 370px;*/
+    height: 670px;
+    margin-left: 0px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: solid 0px var(--colorAmarillo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background{
+    background-attachment: inherit;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 370px;
+    transition: all 0.7s ease-in-out;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background:hover{
+    background-size: 120%;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background.CatCiencia{
+    background-image: url("../resources/images/news/spacex_1.svg");
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background.CatPolitica{
+    background-image: url("../resources/images/news/politica_1.svg");
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background.CatTecnologia{
+    background-image: url("../resources/images/news/tecnologia_1.svg");
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background.CatMedioAmbiente{
+    background-image: url("../resources/images/news/medioAmbiente_1.svg");
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background.CatDeportes{
+    background-image: url("../resources/images/news/deporte_1.svg");
+}
+.controlNoticiasDestacada >.background .noticiaDestacada:hover >.background .datos{
+    margin-top: 125px;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada:hover >.background .datos div:nth-child(1){
+    background-color: var(--colorMorado_opacity);
+}
+.controlNoticiasDestacada >.background .noticiaDestacada:hover >.background .datos div:nth-child(2){
+    background-color: var(--colorMorado_opacity);
+}
+.controlNoticiasDestacada >.background .noticiaDestacada:hover >.background .datos div:nth-child(3){
+    background-color: var(--colorMorado_opacity);
+}
+.controlNoticiasDestacada >.background .noticiaDestacada:hover >.background .datos div:nth-child(4){
+    background-color: var(--colorMorado_opacity);
+}
+/* GRILLA / DESAFIO:: "APLICANDO GRIDS" */
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos{
+    height: 370px;
+    width: 370px;
+    display: grid;
+    /*grid-template-areas: "header header header header" "body body body sideRight" "body body body sideRight" "footer footer footer footer";
+    grid-template-columns: repeat(25%);
+    grid-template-rows: repeat(25%);*/
+    grid-template-areas: "header header header header header" "body body body body sideRight" "body body body body sideRight" "footer footer footer footer footer";
+    grid-template-columns: 50px 50px 50px 40px 160px;
+    grid-template-rows: repeat(20%);
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+    /*margin-top: 570px;*/
+    margin-top: 690px;
+    transition: 0.3s ease-in-out;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos >div{
+    border-radius: 2px;
+    background-color: var(--colorMorado);
+    border: solid 1px var(--colorAmarillo);
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos .header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos .header p a{
+    width: 100%;
+    color: var(--colorAmarillo);
+    text-decoration: none !important;
+    font-size: 1.2rem !important;
+    font-family: var(--fontGoogleEncode);
+    font-weight: bold;
+    text-align: center !important;
+    /*animation: animationHeader 1s ease-in-out infinite;*/
+}
+@keyframes animationHeader{
+    0%{
+        color: var(--colorAmarillo);
+    }
+    50%{
+        color: white;
+    }
+    100%{
+        color: var(--colorAmarillo);
+    }
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos .body{
+    grid-area: body;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos .body p{
+    width: 50%;
+    color: var(--colorAmarillo);
+    font-size: 0.8rem !important;
+    font-family: var(--fontGoogleEncode);
+    padding: 0px;
+    text-align: left;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos .sideRight{
+    grid-area: sideRight;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos .sideRight .far{
+    color: var(--colorAmarillo) !important;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos .footer{
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos .footer p{
+    color: var(--colorAmarillo);
+    font-size: 0.9rem !important;
+    font-family: var(--fontGoogleEncode);
+}
+.controlNoticiasDestacada >.background .noticiaDestacada >.background .datos .footer p a{
+    width: 100%;
+    color: white;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    font-family: var(--fontGoogleEncode);
+    font-weight: bold;
+    text-align: center !important;
+}
+/* NUEVO CONTROL */
+.controlDestacadas{
+    width: 100%;
+    height: auto;
+}
+.controlDestacadas .background{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+/* GRILLA / DESAFIO:: "APLICANDO GRIDS" */
+.controlDestacadas .background .gridNews{
+    height: calc(100vh - 160px);
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+                            /*"header header header header header" 
+                            "left left left left right" 
+                            "left left left left right"  
+                            "left left left left right" 
+                            "left left left left right"
+                            "left left left left right"
+                            "left left left left right"
+                            "left left left left right"
+                            "left left left left right"
+                            "left left left left right";*/
+                            
+                            "left left left left left left left left left right"
+                            "left left left left left left left left left right"
+                            "left left left left left left left left left right"
+                            "left left left left left left left left left right"
+                            "left left left left left left left left left right"
+                            "left left left left left left left left left right"
+                            "left left left left left left left left left right"
+                            "left left left left left left left left left right"
+                            "left left left left left left left left left right"
+                            "header header header header header header header header header header";
+
+    grid-template-columns: /*repeat(10%)*/ 2.5% 5% 10% 10% 10% 10% 10% 10% 10% 20% ;
+    grid-template-rows: repeat(10%);
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+}
+.controlDestacadas .background .gridNews >div{
+    background-color: rgb(14, 14, 14);
+    border-radius: 5px;
+    border: solid 0px var(--colorAmarillo_opacity);
+    transition: all 0.5s ease-in-out;
+}
+.controlDestacadas .background .gridNews >div:hover{
+    border: solid 0px var(--colorAmarillo);
+}
+.controlDestacadas .background .gridNews .header{
+    grid-area: header;
+    height: 100%;
+}
+/* GRILLA / DESAFIO:: "APLICANDO GRIDS" */
+.controlDestacadas .background .gridNews .header .headerGrid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-color: transparent;
+    grid-template-areas: "col1 col2 col3 col4";
+    grid-template-columns: repeat(25%);
+    grid-template-rows: 100%;
+    column-gap: 5px;
+    justify-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(1){
+    grid-area: col1;
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(2){
+    grid-area: col2;
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(3){
+    grid-area: col3;
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(4){
+    grid-area: col4;
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem{
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem .newsHeader{
+    width: 98%;
+    height: 95%;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 0px var(--colorAmarillo);
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem .newsHeader .sideLeft{
+    float: left;
+    width: 60%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: solid 1px var(--colorAmarillo);
+    font-family: var(--fontGoogleEncode);
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem .newsHeader .sideLeft .text{
+    padding-left: 15px;
+    color: white;
+    line-height: 17px;
+    font-size: 1rem;
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem .newsHeader .sideLeft .categoria{
+    padding-left: 15px;
+    color: var(--colorPlomo);
+    line-height: 17px;
+    width: 100%;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem .newsHeader .sideLeft .goNews{
+    padding-left: 15px;
+    color: var(--colorAmarillo);
+    text-decoration: none;
+    background-color: transparent;
+    width: 100%;
+    transition: all 0.7s ease-in-out;
+    animation: animation_goNews 0.7s ease-in-out infinite;
+    font-weight: bold;
+}
+@keyframes animation_goNews{
+    0%{color: var(--colorAmarillo);}
+    50%{color: white;}
+    100%{color: var(--colorAmarillo);}
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem .newsHeader .sideRigth{
+    float: left;
+    width: 40%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controlDestacadas .background .gridNews .header .headerGrid .headerItem .newsHeader .sideRigth{
+    background-image: url("../resources/images/logo/logo.svg");
+    background-attachment: inherit;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+}
+.controlDestacadas .background .gridNews .left{
+    grid-area: left;
+}
+.controlDestacadas .background .gridNews .left .leftGrid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-color: transparent;
+    grid-template-areas: "body";
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    column-gap: 5px;
+    justify-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+}
+.controlDestacadas .background .gridNews .left .leftGrid .leftItem{
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft{
+    width: 99%;
+    height: 98%;
+    background-color: black;
+    border-radius: 5px;
+    border: solid 0px var(--colorAmarillo) ;
+    display: flex;
+    justify-content: center;
+}
+.controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideLeft{
+    float: left;
+    width: 35%;
+    height: 100%;
+    background-color: transparent;
+}
+.controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideLeft{
+    background-image: url("../resources/images/news/destacada_1/spacex_1.svg");
+    background-attachment: inherit;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    filter: saturate(150%);
+}
+.controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight{
+    float: left;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--fontGoogleEncode);
+    background-color: transparent;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .title{
+    padding-right: 15px;
+    width: 100%;
+}
+.controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .title a{
+    font-family: var(--fontOne);
+    color: var(--colorVerde);
+    font-size: 5rem;
+    text-decoration: none;
+}
+.controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .text{
+    padding-right: 15px;
+    color: white;
+    line-height: 25px;
+    font-size: 1.2rem;
+    width: 100%;
+}
+.controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .categoria{
+    padding-right: 15px;
+    color: var(--colorPlomo);
+    line-height: 17px;
+    width: 100%;
+    font-size: 1.2rem;
+    text-decoration: none;
+    width: 100%;
+    font-weight: bold;
+}
+.controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .goNews{
+    padding-right: 15px;
+    color: var(--colorAmarillo);
+    text-decoration: none;
+    background-color: transparent;
+    width: 100%;
+    transition: all 0.7s ease-in-out;
+    animation: animation_goNews 0.7s ease-in-out infinite;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.controlDestacadas .background .gridNews .right{
+    grid-area: right;
+    height: 100%;
+}
+.controlDestacadas .background .gridNews .right .rightGrid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-color: transparent;
+    grid-template-areas: "body";
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    column-gap: 5px;
+    justify-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+}
+.controlDestacadas .background .gridNews .right .rightGrid .rightItem{
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight{
+    width: 97%;
+    height: 98%;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border: solid 0px var(--colorAmarillo) ;
+    font-family: var(--fontGoogleEncode);
+    text-align: right;
+    padding-bottom: 50px;
+}
+.controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight{
+    background-image: url("../resources/images/news/destacada_2/deporte_1.svg");
+    background-attachment: inherit;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-color: transparent;
+    filter: saturate(150%);
+}
+.controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight >p, .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight >a{
+    background-color: var(--colorBackgroundText) !important;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight .title{
+    color: var(--colorAmarillo);
+    font-size: 1.5rem;
+    width: 100%;
+}
+.controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight .text{
+    color: white;
+    line-height: 17px;
+    font-size: 1rem;
+    width: 100%;
+}
+.controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight .categoria{
+    color: var(--colorPlomo);
+    line-height: 17px;
+    width: 100%;
+    font-size: 0.8rem;
+    text-decoration: none;
+    width: 100%;
+    font-weight: bold;
+}
+.controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight .goNews{
+    color: var(--colorAmarillo);
+    text-decoration: none;
+    background-color: transparent;
+    width: 100%;
+    transition: all 0.7s ease-in-out;
+    animation: animation_goNews 0.7s ease-in-out infinite;
+    width: 100%;
+    font-weight: bold;
+}
+.barsocialNews{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+}
+.barsocialNews >.background{
+    width: 95%;
+    height: 50px;
+    margin-left: 0%;
+    padding-top: 2.5px;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end !important;
+}
+.barsocialNews >.background .button_social{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding-top: 1.5px;
+    padding-left: 2.5px;
+    cursor: pointer;
+    color: black;
+    background-color: transparent;
+}
+.barsocialNews >.background .button_social >.background{
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 5px;
+    padding-top: 8px;
+    background-color: var(--colorAmarillo);
+}
+/* GRILLA / DESAFIO:: "APLICANDO GRIDS" */
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+    .controlDestacadas .background .gridNews{
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+                                
+                                
+                                
+                                "left left left left left left left left left left"
+                                "right right right right right right right right right right"
+                                "header header header header header header header header header header";
+    
+        grid-template-columns: /*repeat(10%)*/ 6% 5% 10% 10% 10% 10% 10% 10% 10% 10% ;
+        grid-template-rows: repeat(20%);
+        column-gap: 5px;
+        row-gap: 5px;
+        justify-items: stretch;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid{
+        width: 100%;
+        height: auto;
+        display: block;
+        background-color: transparent;
+        overflow: hidden;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem{
+        width: 100%;
+        height: 150px;
+        background-color: transparent;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlDestacadas .background .gridNews .right{
+        height: auto;
+        display: block;
+        grid-area: right;
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid{
+        height: auto;
+        background-color: transparent;
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight{
+        width: 97%;
+        height: auto;
+        background-color: black;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        border: solid 0px var(--colorAmarillo) ;
+        font-family: var(--fontGoogleEncode);
+        text-align: right;
+        padding-bottom: 50px;
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight{
+        background-image: url("../resources/images/news/destacada_2/deporte_1.svg");
+        background-attachment: inherit;
+        background-position: 0% 30%;
+        background-repeat: no-repeat;
+        background-size: 110%;
+        background-color: transparent;
+        filter: saturate(150%);
+        animation: animation_back_newsRight 30s ease-in-out infinite;
+    }
+    @keyframes animation_back_newsRight {
+        0%{background-position: 0% 30%;}
+        50%{background-position: 100% 30%;}
+        100%{background-position: 0% 30%;}
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight >p, .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight >a{
+        background-color: var(--colorBackgroundText) !important;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .controlDestacadas .background .gridNews .left{
+        height: 83vh;
+        grid-area: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid{
+        height: 100%;
+        display: block;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem{
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        border-radius: 5px;
+        border: solid 0px var(--colorAmarillo);
+        display: flex;
+        justify-content: center;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideLeft{
+        float: left;
+        width: 100%;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideLeft{
+        background-image: url("../resources/images/news/destacada_1/spacex_1.svg");
+        background-attachment: inherit;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        filter: saturate(150%);
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight{
+        float: left;
+        width: 99%;
+        padding: 20px;
+        position: absolute;
+        top: 100px;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .title{
+        padding-right: 0px;
+        width: 100%;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .title a{
+        font-family: var(--fontOne);
+        color: var(--colorAmarillo);
+        font-size: 2rem;
+        text-decoration: none;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .text{
+        color: white;
+        line-height: 25px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .categoria{
+        color: var(--colorPlomo);
+        line-height: 17px;
+        width: 100%;
+        font-size: 0.9rem;
+        text-decoration: none;
+        width: 100%;
+        font-weight: bold;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .goNews{
+        color: var(--colorAmarillo);
+        text-decoration: none;
+        background-color: transparent;
+        width: 100%;
+        transition: all 0.7s ease-in-out;
+        animation: animation_goNews 0.7s ease-in-out infinite;
+        width: 100%;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }    
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight >p, .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight >a{
+        background-color: var(--colorBackgroundText) !important;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight >a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .barsocialNews{
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .controlDestacadas .background .gridNews{
+        height: auto;
+        width: 99%;
+        display: grid;
+        grid-template-areas: 
+                                
+                                
+                                
+                                "left left left left left left left left left left"
+                                "right right right right right right right right right right"
+                                "header header header header header header header header header header";
+    
+        grid-template-columns: /*repeat(10%)*/ 6% 5% 10% 10% 10% 10% 10% 10% 10% 10% ;
+        grid-template-rows: repeat(20%);
+        column-gap: 5px;
+        row-gap: 5px;
+        justify-items: stretch;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid{
+        /*width: 100%;
+        height: auto;
+        display: block;
+        background-color: transparent;
+        overflow: hidden;*/
+        width: 100%;
+        height: 100%;
+        display: grid;
+        background-color: transparent;
+        grid-template-areas: "col1 col2" "col3 col4";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        column-gap: 5px;
+        justify-items: stretch;
+        justify-content: stretch;
+        overflow: hidden;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(1){
+        grid-area: col1;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(2){
+        grid-area: col2;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(3){
+        grid-area: col3;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(4){
+        grid-area: col4;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem{
+        width: 99%;
+        height: 150px;
+        background-color: transparent;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlDestacadas .background .gridNews .right{
+        height: auto;
+        display: block;
+        grid-area: right;
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid{
+        height: auto;
+        background-color: transparent;
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight{
+        width: 97%;
+        height: auto;
+        background-color: black;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        border: solid 0px var(--colorAmarillo) ;
+        font-family: var(--fontGoogleEncode);
+        text-align: right;
+        padding-bottom: 50px;
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight{
+        background-image: url("../resources/images/news/destacada_2/deporte_1.svg");
+        background-attachment: inherit;
+        background-position: 0% 30%;
+        background-repeat: no-repeat;
+        background-size: 110%;
+        background-color: transparent;
+        filter: saturate(150%);
+        animation: animation_back_newsRight 30s ease-in-out infinite;
+    }
+    @keyframes animation_back_newsRight {
+        0%{background-position: 0% 30%;}
+        50%{background-position: 100% 30%;}
+        100%{background-position: 0% 30%;}
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight >p, .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight >a{
+        background-color: var(--colorBackgroundText) !important;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .controlDestacadas .background .gridNews .left{
+        height: 83vh;
+        grid-area: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid{
+        height: 100%;
+        display: block;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem{
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        border-radius: 5px;
+        border: solid 0px var(--colorAmarillo);
+        display: flex;
+        justify-content: center;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideLeft{
+        float: left;
+        width: 100%;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideLeft{
+        background-image: url("../resources/images/news/destacada_1/spacex_1.svg");
+        background-attachment: inherit;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        filter: saturate(150%);
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight{
+        float: left;
+        width: 99%;
+        padding: 20px;
+        position: absolute;
+        top: 100px;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .title{
+        padding-right: 0px;
+        width: 100%;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .title a{
+        font-family: var(--fontOne);
+        color: var(--colorAmarillo);
+        font-size: 2rem;
+        text-decoration: none;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .text{
+        color: white;
+        line-height: 25px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .categoria{
+        color: var(--colorPlomo);
+        line-height: 17px;
+        width: 100%;
+        font-size: 0.9rem;
+        text-decoration: none;
+        width: 100%;
+        font-weight: bold;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .goNews{
+        color: var(--colorAmarillo);
+        text-decoration: none;
+        background-color: transparent;
+        width: 100%;
+        transition: all 0.7s ease-in-out;
+        animation: animation_goNews 0.7s ease-in-out infinite;
+        width: 100%;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }    
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight >p, .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight >a{
+        background-color: var(--colorBackgroundText) !important;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight >a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .barsocialNews{
+        display: none;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .controlDestacadas .background .gridNews{
+        height: auto;
+        width: 99%;
+        display: grid;
+        grid-template-areas: 
+                                
+                                
+                                
+                                "left left left left left left left left left left"
+                                "right right right right right right right right right right"
+                                "header header header header header header header header header header";
+    
+        grid-template-columns: /*repeat(10%)*/ 6% 5% 10% 10% 10% 10% 10% 10% 10% 10% ;
+        grid-template-rows: repeat(20%);
+        column-gap: 5px;
+        row-gap: 5px;
+        justify-items: stretch;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid{
+        /*width: 100%;
+        height: auto;
+        display: block;
+        background-color: transparent;
+        overflow: hidden;*/
+        width: 100%;
+        height: 100%;
+        display: grid;
+        background-color: transparent;
+        grid-template-areas: "col1 col2" "col3 col4";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        column-gap: 5px;
+        justify-items: stretch;
+        justify-content: stretch;
+        overflow: hidden;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(1){
+        grid-area: col1;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(2){
+        grid-area: col2;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(3){
+        grid-area: col3;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem:nth-child(4){
+        grid-area: col4;
+    }
+    .controlDestacadas .background .gridNews .header .headerGrid .headerItem{
+        width: 99%;
+        height: 150px;
+        background-color: transparent;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlDestacadas .background .gridNews .right{
+        height: auto;
+        display: block;
+        grid-area: right;
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid{
+        height: auto;
+        background-color: transparent;
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight{
+        width: 97%;
+        height: auto;
+        background-color: black;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        border: solid 0px var(--colorAmarillo) ;
+        font-family: var(--fontGoogleEncode);
+        text-align: right;
+        padding-bottom: 50px;
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight{
+        background-image: url("../resources/images/news/destacada_2/deporte_1.svg");
+        background-attachment: inherit;
+        background-position: 0% 30%;
+        background-repeat: no-repeat;
+        background-size: 110%;
+        background-color: transparent;
+        filter: saturate(150%);
+        animation: animation_back_newsRight 30s ease-in-out infinite;
+    }
+    @keyframes animation_back_newsRight {
+        0%{background-position: 0% 30%;}
+        50%{background-position: 100% 30%;}
+        100%{background-position: 0% 30%;}
+    }
+    .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight >p, .controlDestacadas .background .gridNews .right .rightGrid .rightItem .newsRight >a{
+        background-color: var(--colorBackgroundText) !important;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .controlDestacadas .background .gridNews .left{
+        height: 83vh;
+        grid-area: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid{
+        height: 100%;
+        display: block;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem{
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        border-radius: 5px;
+        border: solid 0px var(--colorAmarillo);
+        display: flex;
+        justify-content: center;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideLeft{
+        float: left;
+        width: 100%;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideLeft{
+        background-image: url("../resources/images/news/destacada_1/spacex_1.svg");
+        background-attachment: inherit;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        background-color: transparent;
+        filter: saturate(150%);
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight{
+        float: left;
+        width: 99%;
+        padding: 20px;
+        
+        top: 100px;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .title{
+        padding-right: 0px;
+        width: 100%;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .title a{
+        font-family: var(--fontOne);
+        color: var(--colorAmarillo);
+        font-size: 2rem;
+        text-decoration: none;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .text{
+        color: white;
+        line-height: 25px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .categoria{
+        color: var(--colorPlomo);
+        line-height: 17px;
+        width: 100%;
+        font-size: 0.9rem;
+        text-decoration: none;
+        width: 100%;
+        font-weight: bold;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight .goNews{
+        color: var(--colorAmarillo);
+        text-decoration: none;
+        background-color: transparent;
+        width: 100%;
+        transition: all 0.7s ease-in-out;
+        animation: animation_goNews 0.7s ease-in-out infinite;
+        width: 100%;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }    
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight >p, .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight >a{
+        background-color: var(--colorBackgroundText) !important;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .controlDestacadas .background .gridNews .left .leftGrid .leftItem .newsLeft .sideRight >a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .barsocialNews{
+        display: none;
+    }
+}
+/* -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- */

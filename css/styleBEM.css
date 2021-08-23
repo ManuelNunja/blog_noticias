@@ -1,0 +1,639 @@
+/* COLORES */
+/* FUENTES */
+/* COLOR SOCIAL */
+.controlPlanes {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .controlPlanes > .background {
+    width: 95%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .controlPlanes > .background > .row {
+      width: 70%;
+      height: 700px;
+      background-color: transparent;
+      display: grid;
+      grid-template-areas: "col1 col2 col3";
+      grid-template-columns: repeat(33%);
+      align-items: center;
+      gap: 5px; }
+      .controlPlanes > .background > .row .column {
+        background-color: transparent;
+        display: flex;
+        justify-content: center; }
+        .controlPlanes > .background > .row .column .plan {
+          width: 95%;
+          height: 520px;
+          background-color: black;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          filter: saturate(1) !important; }
+          .controlPlanes > .background > .row .column .plan.firts {
+            animation: animation_plan 0.9s ease-in-out; }
+          .controlPlanes > .background > .row .column .plan.second {
+            animation: animation_plan 0.75s ease-in-out; }
+          .controlPlanes > .background > .row .column .plan.third {
+            animation: animation_plan 1s ease-in-out; }
+          .controlPlanes > .background > .row .column .plan .block {
+            width: 94%;
+            background-color: black;
+            border-radius: 2px;
+            border: solid 2px #3c1fa5;
+            box-shadow: 0px 0px 10px 1px #3c1fa5;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .controlPlanes > .background > .row .column .plan .block .price p {
+              color: #42bb09;
+              font-weight: bold;
+              font-family: "Encode Sans SC", sans-serif;
+              font-size: 25px !important; }
+          .controlPlanes > .background > .row .column .plan .block.plan__title {
+            height: 100px;
+            padding-top: 10px; }
+            .controlPlanes > .background > .row .column .plan .block.plan__title p {
+              color: #dbc721;
+              font-size: 25px;
+              font-family: "Encode Sans SC", sans-serif;
+              font-weight: bold;
+              border-bottom: solid 1px yellow; }
+          .controlPlanes > .background > .row .column .plan .block.plan__description {
+            height: 320px;
+            display: flex;
+            flex-direction: column; }
+            .controlPlanes > .background > .row .column .plan .block.plan__description .detail {
+              display: flex;
+              flex-direction: row; }
+              .controlPlanes > .background > .row .column .plan .block.plan__description .detail .text ul {
+                color: white;
+                line-height: 40px; }
+              .controlPlanes > .background > .row .column .plan .block.plan__description .detail .icon ul {
+                line-height: 40px;
+                list-style-type: none; }
+                .controlPlanes > .background > .row .column .plan .block.plan__description .detail .icon ul li .fa-check {
+                  color: #42bb09; }
+                .controlPlanes > .background > .row .column .plan .block.plan__description .detail .icon ul li .fa-times {
+                  color: #e70e0e; }
+          .controlPlanes > .background > .row .column .plan .block.plan__button {
+            height: 100px; }
+            .controlPlanes > .background > .row .column .plan .block.plan__button .button--plan {
+              width: 70%;
+              height: 50px;
+              background-color: #dbc721;
+              border: none;
+              border: solid 1px rgba(255, 255, 255, 0.1) !important;
+              box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.5);
+              border-radius: 5px;
+              transition: all 0.2s ease-in-out;
+              color: #363636;
+              font-weight: bold;
+              font-size: 15px;
+              font-family: "Encode Sans SC", sans-serif; }
+              .controlPlanes > .background > .row .column .plan .block.plan__button .button--plan:hover {
+                border: none;
+                width: calc(70% + 10px);
+                height: 52px;
+                font-size: 16px;
+                border-radius: 5px; }
+
+@keyframes animation_plan {
+  from {
+    margin-top: 50px;
+    opacity: 0; }
+  to {
+    margin-top: 0px;
+    opacity: 1; } }
+        .controlPlanes > .background > .row .column .plan.plan--destacado {
+          height: 590px !important; }
+          .controlPlanes > .background > .row .column .plan.plan--destacado .block {
+            width: 94%;
+            background-color: black;
+            border-radius: 2px;
+            border: solid 2px #dbc721;
+            box-shadow: 0px 0px 10px 1px #dbc721;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+      .controlPlanes > .background > .row .column.column--left {
+        grid-area: col1;
+        background-color: transparent; }
+      .controlPlanes > .background > .row .column.column--center {
+        grid-area: col2;
+        background-color: transparent; }
+      .controlPlanes > .background > .row .column.column--right {
+        grid-area: col3;
+        background-color: transparent; }
+
+.controlPlanes.backImage {
+  background-image: url("../resources/images/logo/logo_H_plomo.svg");
+  background-attachment: fixed;
+  background-position: 50% 0%;
+  background-repeat: repeat;
+  background-size: 180px;
+  min-height: 95px; }
+
+@media only screen and (max-width: 600px) {
+  .controlPlanes > .background {
+    width: 100%; }
+    .controlPlanes > .background > .row {
+      width: 80%;
+      height: auto;
+      display: flex;
+      flex-direction: column; }
+      .controlPlanes > .background > .row .column .plan {
+        width: 100%;
+        height: 520px; }
+      .controlPlanes > .background > .row .plan.plan--destacado {
+        height: 590px !important; } }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .controlPlanes > .background {
+    width: 100%; }
+    .controlPlanes > .background > .row {
+      width: 70%;
+      height: auto;
+      display: flex;
+      flex-direction: column; }
+      .controlPlanes > .background > .row .column .plan {
+        width: 100%;
+        height: 520px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .controlPlanes > .background {
+    width: 100%; }
+    .controlPlanes > .background > .row {
+      width: 80%;
+      height: auto;
+      display: flex;
+      flex-direction: column; }
+      .controlPlanes > .background > .row .column .plan {
+        width: 65%;
+        height: 520px; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .controlPlanes > .background {
+    width: 100%; }
+    .controlPlanes > .background > .row {
+      width: 100%;
+      height: auto; }
+      .controlPlanes > .background > .row .column .plan {
+        width: 100%;
+        height: 520px; } }
+
+@media only screen and (min-width: 1440px) and (max-width: 1600px) {
+  .controlPlanes > .background {
+    width: 100%; }
+    .controlPlanes > .background > .row {
+      width: 80%;
+      height: auto; }
+      .controlPlanes > .background > .row .column .plan {
+        width: 100%;
+        height: 520px; } }
+
+/* FOOTER */
+.footer_site {
+  width: 100%;
+  height: 290px;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  background-color: transparent;
+  border-top: 1px solid var(--colorPlomo_opacity); }
+  .footer_site .background_footer {
+    width: 99%;
+    height: auto;
+    margin-left: 0.5%;
+    text-align: center;
+    background-color: transparent; }
+    .footer_site .background_footer .row_footer {
+      width: 100%;
+      height: auto;
+      background-color: transparent; }
+      .footer_site .background_footer .row_footer .column_footer {
+        float: left;
+        width: calc(calc(100% / 5) - 6px);
+        height: 290px;
+        margin-left: 5px;
+        background-color: transparent; }
+        .footer_site .background_footer .row_footer .column_footer:nth-child(1) {
+          border-radius: 0px 0px 0px 0px; }
+        .footer_site .background_footer .row_footer .column_footer:nth-child(5) {
+          border-radius: 0px 0px 0px 0px; }
+        .footer_site .background_footer .row_footer .column_footer > .background .logo {
+          background-image: url("../resources/images/logo/logo.svg");
+          background-attachment: initial;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 90% 90%;
+          min-height: 290px;
+          border-radius: 0px; }
+        .footer_site .background_footer .row_footer .column_footer > .background ul {
+          background-color: transparent;
+          width: 100%; }
+          .footer_site .background_footer .row_footer .column_footer > .background ul li {
+            text-align: center;
+            margin-left: -25px;
+            list-style-type: none;
+            list-style-position: initial;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: transparent; }
+            .footer_site .background_footer .row_footer .column_footer > .background ul li.Facebook {
+              color: var(--colorfacebook) !important; }
+            .footer_site .background_footer .row_footer .column_footer > .background ul li.Twitter {
+              color: var(--colorTwitter) !important; }
+            .footer_site .background_footer .row_footer .column_footer > .background ul li.Instagram {
+              color: var(--colorInstagram) !important; }
+            .footer_site .background_footer .row_footer .column_footer > .background ul li.YouTube {
+              color: var(--colorYoutube) !important; }
+        .footer_site .background_footer .row_footer .column_footer > .background .list_site {
+          float: left;
+          width: 33.33%;
+          overflow: hidden;
+          margin-left: 5px;
+          background-color: transparent; }
+          .footer_site .background_footer .row_footer .column_footer > .background .list_site .list_title {
+            width: 100%;
+            padding-left: 5px;
+            text-align: left;
+            color: var(--colorPlomo);
+            text-decoration: underline;
+            line-height: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-family: var(--fontGoogleEncode); }
+          .footer_site .background_footer .row_footer .column_footer > .background .list_site .list_item {
+            list-style-type: none !important;
+            color: var(--colorPlomo) !important;
+            text-align: left;
+            font-size: 1rem;
+            font-family: var(--fontGoogleEncode); }
+            .footer_site .background_footer .row_footer .column_footer > .background .list_site .list_item a {
+              text-decoration: none;
+              color: var(--colorPlomo); }
+              .footer_site .background_footer .row_footer .column_footer > .background .list_site .list_item a:hover {
+                text-decoration: none;
+                color: white; }
+        .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales {
+          width: 100%;
+          height: auto;
+          background-color: transparent; }
+          .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background {
+            width: 100%;
+            height: auto;
+            background-color: transparent;
+            display: grid;
+            grid-template-areas: "col1 col2 col3" "col4 col5 col6";
+            grid-template-columns: repeat(15%);
+            grid-template-rows: 50%;
+            column-gap: 5px; }
+            .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column {
+              height: 140px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center; }
+              .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column:nth-child(1) {
+                grid-area: col1; }
+              .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column:nth-child(2) {
+                grid-area: col2; }
+              .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column:nth-child(3) {
+                grid-area: col3;
+                /*height: 290px;
+                                    margin-top: -3px;*/ }
+              .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column:nth-child(4) {
+                grid-area: col4; }
+              .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column:nth-child(5) {
+                grid-area: col5; }
+              .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column:nth-child(6) {
+                grid-area: col6; }
+              .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item {
+                width: 100%;
+                height: 95%;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                overflow: hidden; }
+                .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab {
+                  width: 100%;
+                  height: 100%;
+                  color: white;
+                  font-size: 3rem;
+                  border-radius: 5px;
+                  background-color: transparent;
+                  /*border-left: solid 1px white;
+                                        border-right: solid 1px white;*/
+                  border: solid 1px #5858585e;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+                  .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab.LinkedIn {
+                    color: #0a66c2; }
+                  .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab.Instagram {
+                    color: #f46f30; }
+                  .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab.Twitter {
+                    color: #1da1f2; }
+                  .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab.Facebook {
+                    color: #173c6b; }
+                  .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab.TikTok {
+                    color: #222222; }
+                  .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab.WhatsApp {
+                    color: #0da50d; }
+                  .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab:hover {
+                    background-color: #dbc721;
+                    padding-bottom: 5px;
+                    text-shadow: 7px 7px 2px #000, -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+        .footer_site .background_footer .row_footer .column_footer > .background .controlContactanos {
+          width: 100%;
+          height: auto;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .footer_site .background_footer .row_footer .column_footer > .background .controlContactanos .background {
+            width: 95%;
+            height: auto; }
+      .footer_site .background_footer .row_footer .column_footer.column_footer_double {
+        width: 25% !important;
+        height: 290px; }
+      .footer_site .background_footer .row_footer .column_footer.column_footer_triple {
+        /*width: calc(calc(calc(100% / 5) - 6px) * 1.5) !important;*/
+        width: calc(calc(calc(100% / 5) - 6px) * 1.5) !important;
+        height: 290px; }
+      .footer_site .background_footer .row_footer .side {
+        float: left;
+        width: 50px;
+        height: 290px;
+        background-color: blue;
+        margin-left: 5px; }
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .footer_site {
+    display: block; }
+    .footer_site .background_footer .row_footer .column_footer {
+      float: left;
+      width: 100%;
+      height: 290px;
+      margin-left: 0px;
+      background-color: transparent; }
+      .footer_site .background_footer .row_footer .column_footer:nth-child(2) {
+        display: none; }
+      .footer_site .background_footer .row_footer .column_footer:nth-child(3) {
+        display: none; }
+      .footer_site .background_footer .row_footer .column_footer:nth-child(4) {
+        display: none; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer_site {
+    display: block; }
+    .footer_site .background_footer .row_footer .column_footer {
+      float: left;
+      width: 100%;
+      height: 290px;
+      margin-left: 0px;
+      background-color: transparent; }
+      .footer_site .background_footer .row_footer .column_footer:nth-child(2) {
+        display: none; }
+      .footer_site .background_footer .row_footer .column_footer:nth-child(3) {
+        display: none; }
+      .footer_site .background_footer .row_footer .column_footer:nth-child(4) {
+        display: none; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .footer_site {
+    display: block; }
+    .footer_site .background_footer .row_footer .column_footer {
+      float: left;
+      width: 100%;
+      height: 290px;
+      margin-left: 0px;
+      background-color: transparent; }
+      .footer_site .background_footer .row_footer .column_footer:nth-child(2) {
+        display: none; }
+      .footer_site .background_footer .row_footer .column_footer:nth-child(3) {
+        display: none; }
+      .footer_site .background_footer .row_footer .column_footer:nth-child(4) {
+        display: none; } }
+
+/*------------*/
+/* CONTROL USER */
+/* DESAFIO::"Aplicando SASS - Operaciones" */
+.controlUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+  .controlUser .iconUser {
+    color: #42bb09;
+    cursor: pointer;
+    border: solid 0px #5858585e;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 10px; }
+    .controlUser .iconUser:nth-child(1) {
+      display: none; }
+    .controlUser .iconUser:hover {
+      padding-top: 11px; }
+
+.iconUser--size16 {
+  font-size: 16px; }
+
+.iconUser--size32 {
+  font-size: 32px; }
+
+.iconUser--size64 {
+  font-size: 64px; }
+
+/* ------------------------------------------------------------------- */
+.controlBreadcrum {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-family: "Encode Sans SC", sans-serif;
+  position: absolute;
+  top: 70px;
+  z-index: 1080;
+  background-color: transparent;
+  position: fixed !important;
+  /*box-shadow: 0px 3px 7px -1px rgba(255, 255, 255, 0.068);*/ }
+
+.controlSiteMap {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .controlSiteMap > .background {
+    width: 80%;
+    height: auto;
+    background-color: transparent;
+    display: grid;
+    grid-template-areas: "col1 col2 col3 col4 col5";
+    grid-template-columns: 20%;
+    grid-template-rows: 100%;
+    gap: 10px; }
+    .controlSiteMap > .background .sectionSite {
+      width: 100%;
+      min-width: 250px;
+      height: 290px;
+      border-radius: 5px;
+      background-color: #150a3d;
+      display: flex;
+      justify-content: center; }
+      .controlSiteMap > .background .sectionSite:nth-child(1) {
+        grid-area: col1; }
+      .controlSiteMap > .background .sectionSite:nth-child(2) {
+        grid-area: col2; }
+      .controlSiteMap > .background .sectionSite:nth-child(3) {
+        grid-area: col3; }
+      .controlSiteMap > .background .sectionSite:nth-child(4) {
+        grid-area: col4; }
+      .controlSiteMap > .background .sectionSite:nth-child(5) {
+        grid-area: col5; }
+      .controlSiteMap > .background .sectionSite .background {
+        width: 95%;
+        height: auto;
+        border-radius: 2px;
+        background-color: transparent; }
+        .controlSiteMap > .background .sectionSite .background .title {
+          height: 50px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          border-bottom: solid 1px white; }
+          .controlSiteMap > .background .sectionSite .background .title h2 a {
+            text-decoration: none;
+            padding-left: 5px;
+            color: #dbc721;
+            font-family: "Encode Sans SC", sans-serif;
+            font-size: 1.2rem;
+            animation: animation_title 0.5s ease-in-out infinite; }
+            .controlSiteMap > .background .sectionSite .background .title h2 a .fas {
+              font-size: 0.8rem;
+              padding-top: 0px;
+              padding-left: 10px;
+              color: white; }
+
+@keyframes animation_title {
+  0% {
+    color: #dbc721; }
+  50% {
+    color: white; }
+  100% {
+    color: #dbc721; } }
+        .controlSiteMap > .background .sectionSite .background .paragraph {
+          height: 70px;
+          color: white;
+          font-size: 0.9rem;
+          text-align: justify;
+          font-weight: 100;
+          line-height: 21px; }
+        .controlSiteMap > .background .sectionSite .background .content {
+          height: 100px;
+          padding-top: 10px;
+          display: flex;
+          flex-direction: column; }
+          .controlSiteMap > .background .sectionSite .background .content ul li {
+            font-size: 0.8rem;
+            color: #dbc721; }
+        .controlSiteMap > .background .sectionSite .background .link {
+          width: 100%;
+          height: 50px;
+          background-color: transparent;
+          display: flex;
+          justify-content: center; }
+          .controlSiteMap > .background .sectionSite .background .link a {
+            width: 100%;
+            text-align: center;
+            background-color: transparent;
+            font-size: 0.8rem;
+            color: #dbc721;
+            font-family: "Encode Sans SC", sans-serif; }
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .controlSiteMap > .background {
+    display: grid;
+    grid-template-areas: "col1" "col2" "col3" "col4" "col5";
+    grid-template-columns: 100%;
+    grid-template-rows: 20%; }
+    .controlSiteMap > .background .sectionSite {
+      height: 230px; }
+      .controlSiteMap > .background .sectionSite .background .paragraph {
+        height: 50px; }
+      .controlSiteMap > .background .sectionSite .background .content {
+        padding-top: 0px;
+        height: 60px; }
+      .controlSiteMap > .background .sectionSite .background .link {
+        height: 30px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .controlSiteMap > .background {
+    display: grid;
+    grid-template-areas: "col1" "col2" "col3" "col4" "col5";
+    grid-template-columns: 100%;
+    grid-template-rows: 20%; }
+    .controlSiteMap > .background .sectionSite {
+      height: 230px; }
+      .controlSiteMap > .background .sectionSite .background .paragraph {
+        height: 50px; }
+      .controlSiteMap > .background .sectionSite .background .content {
+        padding-top: 0px;
+        height: 60px; }
+      .controlSiteMap > .background .sectionSite .background .link {
+        height: 30px; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .controlSiteMap > .background {
+    display: grid;
+    grid-template-areas: "col1 col2" "col3 col4" "col5 col6";
+    grid-template-columns: 50%;
+    grid-template-rows: 33%; }
+    .controlSiteMap > .background .sectionSite {
+      height: 230px; }
+      .controlSiteMap > .background .sectionSite .background .paragraph {
+        height: 50px; }
+      .controlSiteMap > .background .sectionSite .background .content {
+        padding-top: 0px;
+        height: 60px; }
+      .controlSiteMap > .background .sectionSite .background .link {
+        height: 30px; } }
+
+@media only screen and (min-width: 1440px) and (max-width: 1600px) {
+  .controlSiteMap > .background {
+    display: grid;
+    grid-template-areas: "col1 col2 col3" "col4 col5 col6";
+    grid-template-columns: 32%;
+    grid-template-rows: 50%; }
+    .controlSiteMap > .background .sectionSite {
+      height: 230px; }
+      .controlSiteMap > .background .sectionSite .background .paragraph {
+        height: 50px; }
+      .controlSiteMap > .background .sectionSite .background .content {
+        padding-top: 0px;
+        height: 60px; }
+      .controlSiteMap > .background .sectionSite .background .link {
+        height: 30px; } }
