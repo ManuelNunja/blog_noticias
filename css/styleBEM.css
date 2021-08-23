@@ -344,7 +344,11 @@
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+                  text-shadow: 3px 3px 0 #000,
+ -1px -1px 0 #000,  
+ 1px -1px 0 #000,
+ -1px 1px 0 #000,
+ 1px 1px 0 #000; }
                   .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab.LinkedIn {
                     color: #0a66c2; }
                   .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab.Instagram {
@@ -360,7 +364,11 @@
                   .footer_site .background_footer .row_footer .column_footer > .background .controlRedesSociales .background .column .item .fab:hover {
                     background-color: #dbc721;
                     padding-bottom: 5px;
-                    text-shadow: 7px 7px 2px #000, -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+                    text-shadow: 7px 7px 2px #000,
+ -1px -1px 0 #000,  
+ 1px -1px 0 #000,
+ -1px 1px 0 #000,
+ 1px 1px 0 #000; }
         .footer_site .background_footer .row_footer .column_footer > .background .controlContactanos {
           width: 100%;
           height: auto;
@@ -477,6 +485,10 @@
   background-color: transparent;
   position: fixed !important;
   /*box-shadow: 0px 3px 7px -1px rgba(255, 255, 255, 0.068);*/ }
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .controlBreadcrum {
+    display: none; } }
 
 .controlSiteMap {
   width: 100%;
