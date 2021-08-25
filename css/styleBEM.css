@@ -120,6 +120,18 @@
   100% {
     margin-left: calc(100%); } }
 
+@keyframes animation_menu_site_panelRight_show_mobile {
+  0% {
+    margin-left: calc(100%); }
+  100% {
+    margin-left: calc(100% - 100px); } }
+
+@keyframes animation_menu_site_panelRight_hide_mobile {
+  0% {
+    margin-left: calc(100% - 100px); }
+  100% {
+    margin-left: calc(100%); } }
+
 .menu_site_panelRight {
   float: right;
   width: 400px;
@@ -263,7 +275,59 @@
 .menu_site_panelRight > .background .listMenu .linkBar .linkSite .text:hover {
   padding-left: 25px; }
 
+.menu_site_panelRight > .background .listMenuMobile {
+  display: none; }
+
 /*------------*/
+/*-- MENU MOBILE --*/
+@media only screen and (min-width: 360px) and (max-width: 600px) {
+  .menu_site_panelRight_show {
+    display: block !important;
+    animation: animation_menu_site_panelRight_show_mobile 0.35s ease-in-out !important;
+    animation-fill-mode: forwards !important; }
+  .menu_site_panelRight_hide {
+    display: block !important;
+    animation: animation_menu_site_panelRight_hide_mobile 0.35s ease-in-out !important;
+    animation-fill-mode: forwards !important; }
+  .menu_site_panelRight {
+    width: 100px;
+    padding-left: 0px; }
+  .menu_site_panelRight > .background {
+    width: 100px !important; }
+  .menu_site_panelRight > .background .listMenu {
+    display: none; }
+  .menu_site_panelRight > .background .listMenuMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    height: auto; }
+    .menu_site_panelRight > .background .listMenuMobile > .background {
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; }
+      .menu_site_panelRight > .background .listMenuMobile > .background .itemmenu {
+        width: 80px;
+        height: 80px;
+        text-decoration: none; }
+        .menu_site_panelRight > .background .listMenuMobile > .background .itemmenu .background {
+          width: 75px;
+          height: 75px;
+          background-color: #dbc721;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .menu_site_panelRight > .background .listMenuMobile > .background .itemmenu .background i {
+            font-size: 30px;
+            color: black; } }
+
 @media only screen and (min-width: 360px) and (max-width: 400px) {
   .menu_site > .background .sideLeft {
     float: left;
@@ -805,8 +869,8 @@
   gap: 15px; }
 
 .carouselSite .carousel-inner .carousel-item .newsCarousel .newsCarouselItem {
-  width: 450px !important;
-  height: 150px !important;
+  width: 450px;
+  height: 150px;
   background-color: transparent !important;
   display: flex;
   justify-content: center;
@@ -814,7 +878,7 @@
   cursor: pointer; }
 
 .carouselSite .carousel-inner .carousel-item .newsCarousel .newsCarouselItem .background {
-  width: 540px !important;
+  width: 440px !important;
   height: 145px !important;
   background-color: black !important;
   border-radius: 5px;
@@ -877,11 +941,16 @@
 
 @media only screen and (min-width: 360px) and (max-width: 599px) {
   .carouselSite .carousel-inner .carousel-item .newsCarousel {
-    grid-template-areas: "col1"; }
+    display: flex;
+    justify-content: center;
+    /*display: grid;
+        grid-template-areas: "col1";*/
+    gap: 15px;
+    background-color: transparent; }
   .carouselSite .carousel-inner .carousel-item .newsCarousel .newsCarouselItem {
-    width: 330px !important; }
+    width: 100% !important; }
   .carouselSite .carousel-inner .carousel-item .newsCarousel .newsCarouselItem .background {
-    width: 320px !important; }
+    width: 100% !important; }
   .carouselSite .carousel-inner .carousel-item .newsCarousel .newsCarouselItem:nth-child(2) {
     display: none; }
   .carouselSite .carousel-inner .carousel-item .newsCarousel .newsCarouselItem:nth-child(3) {
@@ -895,10 +964,16 @@
   .carouselSite .carousel-inner {
     height: 200px !important; }
   .carouselSite .carousel-inner .carousel-item .newsCarousel {
-    display: grid;
-    grid-template-areas: "col1";
+    display: flex;
     justify-content: center;
-    gap: 15px; }
+    /*display: grid;
+        grid-template-areas: "col1";*/
+    gap: 15px;
+    background-color: transparent; }
+  .carouselSite .carousel-inner .carousel-item .newsCarousel .newsCarouselItem {
+    width: 100% !important; }
+  .carouselSite .carousel-inner .carousel-item .newsCarousel .newsCarouselItem .background {
+    width: 85% !important; }
   .carouselSite .carousel-inner .carousel-item .newsCarousel .newsCarouselItem:nth-child(2) {
     display: none; }
   .carouselSite .carousel-inner .carousel-item .newsCarousel .newsCarouselItem:nth-child(3) {
